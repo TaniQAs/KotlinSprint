@@ -1,22 +1,26 @@
 package org.example.lesson_1_DZ
 
+const val SECONDS_IN_MINUTE = 60
+const val MINUTES_IN_HOUR = 60
+
 fun main() {
 
-   val seconds = 6480
+    val seconds = 6480
 
-    val minutes = seconds / 60
-  //  println(minutes)
+    val minutes = seconds / SECONDS_IN_MINUTE
+    //  println(minutes)
 
-    val remainderSeconds = seconds % 60
-  //  println(remainderSeconds)
+    val remainderSeconds = seconds % SECONDS_IN_MINUTE
+    //  println(remainderSeconds)
 
-    val hours = minutes / 60
-   // println(hours)
+    val hours = minutes / MINUTES_IN_HOUR
+    // println(hours)
 
-    val remainderMinutes = minutes - (hours * 60)
-  //  println(remainderMinutes)
+    val remainderMinutes = minutes - (hours * MINUTES_IN_HOUR)
+    //  println(remainderMinutes)
 
-    println("0" + hours + ":" + remainderMinutes + ":00")
+
+    println(String.format("%02d:%02d:%02d", hours, remainderMinutes, remainderSeconds))
 
 
 }
